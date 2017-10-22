@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>消息</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script>
+  window.onload=function(){
+    $("a").each(function(){
+      $(".ui-btn-icon-notext").hide();
+    })
+    $("a").click(function(){
+      $(this).children().remove(".ui-li-count");
+    })
+  }
+  </script>
+  <style>
+  ul li a .linm{
+    font-weight:bold;
+    font-size:16px;
+  }
+  ul li a .linm span{
+    font-weight:normal;
+    font-size:12px;
+  }
+  </style>
+</head>
+<body>
+	<div data-role="page">
+
+  <div data-role="header" data-position="fixed">
+  <a href=""><img src="https://cdn.duitang.com/uploads/item/201602/05/20160205000423_SXYwC.thumb.224_0.jpeg" alt="" style="height:15px;border-radius:50%;"/></a>
+    <h1>消息</h1>
+    <a href="" data-icon="user" style="height:15px;"></a>
+  </div>
+
+  <div data-role="content">
+  <div style="margin-bottom:20px;">
+  <form method="post" action="demoform.asp">
+        <label for="fname" class="ui-hidden-accessible">用户名： </label>
+        <input type="search" name="search-restaurants" id="search-restaurants" />
+    </form>
+  </div>
+  <ul data-role="listview" >
+  	<li>
+    <a href="">
+    <img style="border-radius:50%;" src="http://p.3761.com/pic/61181434675218.jpg" alt=""/>
+    <p class="linm">美丽迷人的二床<br/><span>喂喂，快回话呀</span></p>
+    <span class="ui-li-count">10</span>
+    </a> 
+    </li>
+  	<li>
+    <a href="">
+    <img style="border-radius:50%;" src="http://img1.skqkw.cn:888/2014/11/26/08/fgzaxeigbs1-71580.jpg" alt=""/>
+    <p class="linm">宣传部-副部<br/><span>你去不去？</span></p><span class="ui-li-count">2</span>
+    </a> 
+    </li>
+  	<li><a href=""><img style="border-radius:50%;" src="http://tx.haiqq.com/uploads/allimg/150331/214H3HN-8.jpg" alt=""/><p class="linm">半夏<br/><span>简直笑死了哈哈哈哈</span></p><span class="ui-li-count">4</span>
+    </a> 
+    </li>
+  	<li><a href="">
+    <img style="border-radius:50%;" src="http://img1.skqkw.cn:888/2014/11/26/09/yoa00r4dgom-95023.jpg" alt=""/><p class="linm">热爱学习的四床<br/><span>这是宿舍的统计</span></p><span class="ui-li-count">8</span>
+    </a> 
+    </li>
+  </ul>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+  <div data-role="navbar">
+      <ul>
+        <li><a href="#" data-icon="comment">消息</a></li>
+        <li><a href="#" data-icon="user">联系人</a></li>
+        <li><a href="#" data-icon="star">动态</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
